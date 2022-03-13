@@ -16,9 +16,9 @@ const formatString = (str) => {
  * @param {String[]} description
  */
 const errorize = (message, embed, description) => {
-  if (!message) throw new Error(`A MESSAGE must be provided!`);
-  if (!embed) throw new Error(`A MESSAGE_EMBED must be provided!`);
-  if (!description) throw new Error(`A DESCRIPTION must be provided!`);
+  if (!message) return new Error(`A MESSAGE must be provided!`);
+  if (!embed) return new Error(`A MESSAGE_EMBED must be provided!`);
+  if (!description) return new Error(`A DESCRIPTION must be provided!`);
 
   embed
     .setAuthor({
