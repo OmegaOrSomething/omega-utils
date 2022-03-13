@@ -1,0 +1,25 @@
+{
+  "name": "omega-utils",
+  "version": "1.0.0",
+  "description": "A Package made specially for and by Omega to assist him in coding his Discord Bot(s). This package consisits of utilities that he would need quick access to.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmegaOrSomething/omega-utils.git"
+  },
+  "keywords": [
+    "Omega"
+  ],
+  "author": "OmegaOrSomething",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmegaOrSomething/omega-utils/issues"
+  },
+  "homepage": "https://github.com/OmegaOrSomething/omega-utils#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
