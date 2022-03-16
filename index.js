@@ -84,8 +84,29 @@ const multiQuery = (msg, type, query) => {
   return results;
 };
 
+const formatTime = (time) => {
+  if (isNaN(time)) throw new Error(`Value is NOT_A_NUMBER`);
+  if (parseInt(time) >= ms("24h"))
+    throw new Error(`Value is OVER_TWENTY_FOUR_HOURS`);
+  let final = {};
+  if (time < 60) {
+    final.seconds = time;
+    return final;
+  } else if (time >= 60 && time <= 3600) {
+    final.minutes = parseInt((time / 60).toString().split(".")[0]);
+    final.seconds = time % 60;
+    return final;
+  } else if (time >= 3600) {
+    final.hours = parseInt((time / 3600).toString().split(`.`)[0]);
+    final.minutes = parseInt(((time % 3600) / 60).toString().split(`.`)[0]);
+    final.seconds = (time % 3600) % 60;
+    return final;
+  }
+};
+
 module.exports = {
   formatString,
+  formatTime,
   errorize,
   arrayRandomize,
   multiQuery,
