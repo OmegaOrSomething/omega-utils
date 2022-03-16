@@ -1,4 +1,5 @@
 const { MessageEmbed, Message } = require("discord.js");
+const ms = require("ms");
 
 /**
  *
@@ -84,6 +85,10 @@ const multiQuery = (msg, type, query) => {
   return results;
 };
 
+/**
+ *
+ * @param {Number} time
+ */
 const formatTime = (time) => {
   if (isNaN(time)) throw new Error(`Value is NOT_A_NUMBER`);
   if (parseInt(time) >= ms("24h"))
