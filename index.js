@@ -152,6 +152,13 @@ const formatTime = (time) => {
   }
 };
 
+const isValidHex = (hex) => {
+  if (!hex) throw new Error(`A HEX_CODE is required`);
+  if (hex.length !== 6) return false;
+  if (!/^#?([0-9A-F]{6})$/i.test(hex)) return false;
+  return true;
+};
+
 module.exports = {
   formatString,
   formatTime,
@@ -159,4 +166,5 @@ module.exports = {
   arrayRandomize,
   multiQueryStartsWith,
   multiQueryIncludes,
+  isValidHex,
 };
