@@ -1,6 +1,6 @@
 {
   "name": "omega-utils",
-  "version": "1.6.9",
+  "version": "1.7.0",
   "description": "A Package made specially for and by Omega to assist him in coding his Discord Bot(s). This package consisits of utilities that he would need quick access to.",
   "main": "index.js",
   "scripts": {
